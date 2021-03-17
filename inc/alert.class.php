@@ -236,6 +236,7 @@ class PluginNewsAlert extends CommonDBTM {
          $login_show_hidden_sql = " `$utable`.`id` IS NOT NULL";
       }
 
+      $show_central_sql ="";
       if ($p['show_only_central_alerts']) {
          //dont show central alert if they should no longer be visible
          $show_central_sql = " AND `$table`.`is_displayed_oncentral`='1'";
